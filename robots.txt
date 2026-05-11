@@ -1,0 +1,27 @@
+# Alpha Service - Robots.txt (SEO Optimization)
+# Pour tous les moteurs de recherche
+
+User-agent: *
+Allow: /
+
+# Désactiver l'accès à certains répertoires
+Disallow: /admin/
+Disallow: /data/
+Disallow: /includes/
+Disallow: /*?*
+Disallow: *.pdf$
+
+# Permettre Google Image Search
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# Sitemap
+Sitemap: https://alphaservice28.fr/sitemap.xml
+
+# Crawl delay (en secondes)
+Crawl-delay: 1
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

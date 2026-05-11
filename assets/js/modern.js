@@ -114,7 +114,7 @@ class AlphaService {
 
     enableAnalytics() {
         // Add Google Analytics or other tracking code here
-        console.log('Analytics enabled');
+        // Analytics enabled (remove console.log for production)
     }
 
     // Animations

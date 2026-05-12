@@ -97,13 +97,19 @@
         // Mettre à jour le lien retour
         window.addEventListener('DOMContentLoaded', () => {
             const backLink = document.getElementById('back-link');
-            const category = { hasGammes: false }; // default
             
             fetch('../includes/produits-data.json').then(r => r.json()).then(data => {
-                const cat = data.categories.find(c => c.id === catId);
-                if (cat) {
-                    backLink.href = cat.hasGammes ? `../categories.html` : `../categories.html`;
-                    backLink.textContent = cat.hasGammes ? '← Retour aux catégories' : '← Retour aux catégories';
+                const category = data.categories.find(c => c.id === catId);
+                if (category) {
+                    if (category.hasGammes) {
+                        // Retour à la page des gammes
+                        backLink.href = `gammes.html?cat=${catId}`;
+                        backLink.textContent = '← Retour aux gammes';
+                    } else {
+                        // Retour aux catégories
+                        backLink.href = '../categories.html';
+                        backLink.textContent = '← Retour aux catégories';
+                    }
                 }
             });
         });

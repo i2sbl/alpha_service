@@ -13,11 +13,15 @@ header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
 
 // Start secure session
 if (session_status() === PHP_SESSION_NONE) {
+    $isSecure = (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off')
+        || (!empty($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)
+        || (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https');
+
     session_set_cookie_params([
         'lifetime' => 3600,
         'path' => '/',
         'domain' => $_SERVER['HTTP_HOST'] ?? 'alphaservice28.fr',
-        'secure' => true,
+        'secure' => $isSecure,
         'httponly' => true,
         'samesite' => 'Strict'
     ]);

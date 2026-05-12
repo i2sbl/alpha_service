@@ -616,7 +616,10 @@ textarea {
 
 .form-error input,
 .form-error textarea,
-.form-error select {
+.form-error select,
+input.error,
+textarea.error,
+select.error {
     border-color: #ef4444;
 }
 

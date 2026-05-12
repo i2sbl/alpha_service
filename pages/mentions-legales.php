@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $page_title = 'Mentions Légales';
 $page_description = 'Mentions légales et informations légales d\'Alpha Service';
 
-include __DIR__ . '/../../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
 <section class="hero" style="padding: 3rem 0;">
@@ -88,4 +88,4 @@ include __DIR__ . '/../../includes/header.php';
     </div>
 </section>
 
-<?php include __DIR__ . '/../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

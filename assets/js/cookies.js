@@ -19,7 +19,8 @@ const CookieManager = {
         const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/;Secure;SameSite=Strict";
+        const secureFlag = location.protocol === 'https:' ? ';Secure' : '';
+        document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/;SameSite=Strict" + secureFlag;
     },
 
     delete: function(name) {

@@ -1,11 +1,11 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $page_title = 'Notre Matériel';
 $page_description = 'Découvrez tout le matériel disponible pour votre location événementielle';
 $page_keywords = 'matériel, équipement, kitchen, cuisine, chauffage';
 
-include __DIR__ . '/../../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
 <section class="hero" style="padding: 3rem 0;">
@@ -138,4 +138,4 @@ include __DIR__ . '/../../includes/header.php';
     </div>
 </section>
 
-<?php include __DIR__ . '/../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

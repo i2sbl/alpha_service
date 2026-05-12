@@ -1,11 +1,11 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $page_title = 'Contact & Devis';
 $page_description = 'Contactez Alpha Service pour obtenir un devis gratuit pour votre événement';
 $page_keywords = 'contact, devis, formulaire de contact';
 
-include __DIR__ . '/../../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 
 // Process form submission
 $success = false;
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $email_body .= "---\nMessage envoyé depuis le site Alpha Service";
 
             // Headers
-            $headers = "From: " . $email . "\r\n";
+            $headers = "From: " . $site_config['email'] . "\r\n";
             $headers .= "Reply-To: " . $email . "\r\n";
             $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
             $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 log_activity('contact_form_submitted', $email);
 
                 // Send confirmation email to user
-                $confirm_subject = "Alpha Service - Confirmatio de votre demande de devis";
+                $confirm_subject = "Alpha Service - Confirmation de votre demande de devis";
                 $confirm_body = "Bonjour " . $name . ",\n\n";
                 $confirm_body .= "Nous avons bien reçu votre demande de devis.\n";
                 $confirm_body .= "Notre équipe vous recontactera dans les 48h.\n\n";
@@ -218,4 +218,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </section>
 
-<?php include __DIR__ . '/../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

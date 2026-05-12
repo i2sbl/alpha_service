@@ -1,11 +1,11 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $page_title = 'Nos Produits';
 $page_description = 'Découvrez notre large gamme de produits pour location: vaisselle, mobilier, nappage, décoration pour vos événements';
 $page_keywords = 'location vaisselle, location mobilier, location nappage, location décoration';
 
-include __DIR__ . '/../../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
 <section class="hero" style="padding: 3rem 0;">
@@ -171,4 +171,4 @@ include __DIR__ . '/../../includes/header.php';
     </div>
 </section>
 
-<?php include __DIR__ . '/../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

@@ -187,7 +187,7 @@ include __DIR__ . '/../includes/header.php';
                 <p>Nous livrons généralement dans les 7 jours suivant la confirmation. Pour les urgences, contactez-nous directement.</p>
             </div>
             <div>
-                <h4>Pouvez-vous livrer au-delà de Chartres ?</h4>
+            <h4>Pouvez-vous livrer au-delà de Mainvilliers ?</h4>
                 <p>Oui ! Nous livrons dans toute la région Eure-et-Loire et au-delà. Des frais de transport s'appliquent selon la distance.</p>
             </div>
             <div>

@@ -2,8 +2,8 @@
 require_once __DIR__ . '/includes/config.php';
 
 $page_title = 'Accueil';
-$page_description = 'Alpha Service - Louez du matériel événementiel, vaisselle, nappage et décoration à Chartres pour vos mariages, anniversaires et fêtes';
-$page_keywords = 'location matériel, mariage, anniversaire, vaisselle, nappages, décoration, événement, Chartres';
+$page_description = 'Alpha Service - Louez du matériel événementiel, vaisselle, nappage et décoration à Mainvilliers pour vos mariages, anniversaires et fêtes';
+$page_keywords = 'location matériel, mariage, anniversaire, vaisselle, nappages, décoration, événement, Mainvilliers';
 
 include __DIR__ . '/includes/header.php';
 ?>
@@ -14,7 +14,7 @@ include __DIR__ . '/includes/header.php';
         <div class="hero-content">
             <h1>Louez Propre, Rendez Sale !</h1>
             <p><?php echo $site_config['tagline']; ?></p>
-            <p>Votre spécialiste en location de matériel événementiel à Chartres depuis plus de 30 ans</p>
+            <p>Votre spécialiste en location de matériel événementiel à Mainvilliers depuis plus de 30 ans</p>
             <a href="<?php echo SITE_URL; ?>/pages/contact.php" class="btn btn-primary">Demander un devis</a>
         </div>
     </div>

@@ -113,7 +113,7 @@ include __DIR__ . '/../includes/header.php';
         <h3>16. Résolution de litiges</h3>
         <p>
             Les litiges seront résolus à l'amiable. En dernier recours, les tribunaux compétents 
-            sont ceux de Chartres.
+            sont ceux de Mainvilliers.
         </p>
 
         <h3>17. Contact</h3>

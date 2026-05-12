@@ -15,6 +15,32 @@ include __DIR__ . '/../includes/header.php';
     </div>
 </section>
 
+<section class="product-links" style="padding: 2rem 0; background: #f8f9fa;">
+    <div class="container">
+        <h2>Accès rapide aux produits</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+            <a href="<?php echo SITE_URL; ?>/pages/produits.php#vaisselle" class="card" style="flex: 1 1 220px; text-align: center; padding: 1rem; border: 1px solid #d1d5db; border-radius: 8px; background: white; text-decoration: none; color: inherit;">
+                <strong>Vaisselle</strong>
+            </a>
+            <a href="<?php echo SITE_URL; ?>/pages/produits.php#materiel" class="card" style="flex: 1 1 220px; text-align: center; padding: 1rem; border: 1px solid #d1d5db; border-radius: 8px; background: white; text-decoration: none; color: inherit;">
+                <strong>Mobilier</strong>
+            </a>
+            <a href="<?php echo SITE_URL; ?>/pages/produits.php#nappage" class="card" style="flex: 1 1 220px; text-align: center; padding: 1rem; border: 1px solid #d1d5db; border-radius: 8px; background: white; text-decoration: none; color: inherit;">
+                <strong>Nappage</strong>
+            </a>
+            <a href="<?php echo SITE_URL; ?>/pages/produits.php#decoration" class="card" style="flex: 1 1 220px; text-align: center; padding: 1rem; border: 1px solid #d1d5db; border-radius: 8px; background: white; text-decoration: none; color: inherit;">
+                <strong>Décoration</strong>
+            </a>
+            <a href="<?php echo SITE_URL; ?>/pages/materiel.php" class="card" style="flex: 1 1 220px; text-align: center; padding: 1rem; border: 1px solid #d1d5db; border-radius: 8px; background: white; text-decoration: none; color: inherit;">
+                <strong>Livraison sur demande</strong>
+            </a>
+            <a href="<?php echo SITE_URL; ?>/pages/formules.php" class="card" style="flex: 1 1 220px; text-align: center; padding: 1rem; border: 1px solid #d1d5db; border-radius: 8px; background: white; text-decoration: none; color: inherit;">
+                <strong>Formules</strong>
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- Vaisselle -->
 <section id="vaisselle">
     <div class="container">

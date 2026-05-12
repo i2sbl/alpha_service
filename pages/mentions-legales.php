@@ -74,7 +74,7 @@ include __DIR__ . '/../includes/header.php';
 
         <h3>Droit applicable</h3>
         <p>
-            Ce site est régi par la loi française. Les tribunaux de Chartres sont compétents en cas de litige.
+            Ce site est régi par la loi française. Les tribunaux de Mainvilliers sont compétents en cas de litige.
         </p>
 
         <h3>Contact</h3>

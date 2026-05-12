@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h2>Informations de Contact</h2>
 
                 <div class="card" style="border-left: 4px solid #16a34a;">
-                    <h3>Alpha Service Chartres</h3>
+                    <h3>Alpha Service Mainvilliers</h3>
                     <p>
                         <strong>Adresse:</strong><br>
                         <?php echo $site_config['address']; ?>
@@ -213,7 +213,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="container">
         <h2>Nous localiser</h2>
         <div style="width: 100%; height: 400px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2632.0843169166!2d1.487!3d48.440!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e288e47f6960d3%3A0x764392ab6d5e36e8!2s7%20Rue%20Georges%20Charpak%2C%2028300%20Chartres!5e0!3m2!1sfr!2sfr!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps?q=7+Rue+Georges+Charpak+28300+Mainvilliers&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>

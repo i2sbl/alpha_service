@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamme - Alpha Service</title>
+    <meta name="description" content="Découvrez nos gammes de produits de location">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/modern.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../index.html" style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">
+                        <i class="fas fa-utensils"></i> Alpha Service
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../gammes.html">Produits</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero" style="padding: 3rem 0;">
+            <div class="container">
+                <a href="../gammes.html" style="color: #8B5CF6; margin-bottom: 1rem; display: inline-block;">
+                    <i class="fas fa-arrow-left"></i> Retour aux gammes
+                </a>
+                <h1 id="gamme-title">Gamme</h1>
+                <p id="gamme-description">Chargement...</p>
+            </div>
+        </section>
+
+        <section style="padding: 3rem 0;">
+            <div class="container">
+                <div class="grid grid-4" id="products-grid">
+                    <p style="text-align: center; grid-column: 1 / -1;">Chargement des produits...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="devis" style="color: white; text-align: center; margin-top: 3rem;">
+            <div class="container">
+                <h2 style="color: white;">Intéressé par cette gamme ?</h2>
+                <p>Demandez un devis gratuit dès maintenant !</p>
+                <a href="../contact.html" class="btn btn-primary" style="background: white; font-weight: 600;">Demander un devis</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <h4>Alpha Service</h4>
+                    <p>Votre partenaire de confiance pour la location d'articles de réception.</p>
+                </div>
+                <div>
+                    <h4>Liens</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="../index.html" style="color: #999;">Accueil</a></li>
+                        <li><a href="../gammes.html" style="color: #999;">Produits</a></li>
+                        <li><a href="../contact.html" style="color: #999;">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Légal</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="../mentions-legales.html" style="color: #999;">Mentions Légales</a></li>
+                        <li><a href="../politique-confidentialite.html" style="color: #999;">Politique de Confidentialité</a></li>
+                        <li><a href="../cgv.html" style="color: #999;">CGV</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border: none; border-top: 1px solid #333; margin: 2rem 0;">
+            <p style="text-align: center; color: #666;">© 2024 Alpha Service. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Récupérer l'ID de la gamme depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const gammeId = urlParams.get('id') || 'formules';
+
+        // Charger les données JSON
+        async function loadGammeData() {
+            try {
+                const response = await fetch('../includes/produits-data.json');
+                const data = await response.json();
+
+                // Trouver la gamme
+                const gamme = data.gammes.find(g => g.id === gammeId);
+                if (!gamme) {
+                    document.getElementById('gamme-title').textContent = 'Gamme non trouvée';
+                    document.getElementById('gamme-description').textContent = 'Désolé, cette gamme n\'existe pas.';
+                    return;
+                }
+
+                // Mettre à jour les titres
+                document.getElementById('gamme-title').textContent = gamme.nom;
+                document.getElementById('gamme-description').textContent = gamme.description;
+                document.title = gamme.nom + ' - Alpha Service';
+
+                // Mettre à jour la section devis avec la couleur de la gamme
+                const devisSection = document.getElementById('devis');
+                const couleur1 = gamme.couleur;
+                const couleur2 = gamme.couleur.replace(/[0-9a-f]{1,2}/gi, (x) => {
+                    const hex = parseInt(x, 16) - 20;
+                    return Math.max(0, hex).toString(16).padStart(2, '0');
+                });
+                devisSection.style.background = `linear-gradient(135deg, ${gamme.couleur} 0%, ${couleur2} 100%)`;
+
+                // Charger les produits
+                const produits = data.produits[gammeId] || [];
+                const grid = document.getElementById('products-grid');
+                grid.innerHTML = '';
+
+                if (produits.length === 0) {
+                    grid.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">Aucun produit disponible dans cette gamme.</p>';
+                    return;
+                }
+
+                // Afficher les produits
+                produits.forEach(produit => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <div class="product-media">
+                            <img class="product-img" src="../assets/images/${produit.image}" 
+                                 alt="${produit.nom}" 
+                                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div style="height: 200px; background: ${gamme.couleur_light}; border-radius: 4px; display: none; align-items: center; justify-content: center;">
+                                <i class="fas fa-box" style="font-size: 3rem; color: ${gamme.couleur};"></i>
+                            </div>
+                        </div>
+                        <h4>${produit.nom}</h4>
+                        <p>${produit.description}</p>
+                        <div style="margin-top: 1rem;">
+                            <strong style="color: ${gamme.couleur};">TTC : ${produit.prix.toFixed(2).replace('.', ',')}€</strong>
+                        </div>
+                        <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #999;">
+                            Code: ${produit.code}
+                            ${produit.pieces ? `<br>Pièces: ${produit.pieces}` : ''}
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+
+            } catch (error) {
+                console.error('Erreur lors du chargement des données:', error);
+                document.getElementById('products-grid').innerHTML = '<p style="text-align: center; grid-column: 1 / -1; color: red;">Erreur lors du chargement des produits.</p>';
+            }
+        }
+
+        // Charger les données au chargement de la page
+        document.addEventListener('DOMContentLoaded', loadGammeData);
+    </script>
+</body>
+</html>

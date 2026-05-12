@@ -15,15 +15,21 @@
     <header class="header">
         <nav class="navbar">
             <div class="container">
-                <div class="nav-brand">
-                    <a href="../index.html" style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">
-                        <i class="fas fa-utensils"></i> Alpha Service
+                <div class="navbar-brand">
+                    <a href="../index.html" class="logo">
+                        <i class="fas fa-champagne-glasses"></i>
+                        <span>Alpha Service</span>
                     </a>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="../gammes.html">Produits</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="navbar-nav" id="navbar-nav">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="../categories.html" class="nav-link active">Produits</a></li>
+                    <li><a href="../formules.html" class="nav-link">Formules</a></li>
+                    <li><a href="../materiel.html" class="nav-link">Matériel</a></li>
+                    <li><a href="../contact.html" class="nav-link btn-cta">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -61,33 +67,43 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                <div>
-                    <h4>Alpha Service</h4>
-                    <p>Votre partenaire de confiance pour la location d'articles de réception.</p>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>À Propos</h3>
+                    <p><strong>Alpha Service SYCARO SARL</strong></p>
+                    <p>Louez propre, rendez sale !</p>
                 </div>
-                <div>
-                    <h4>Liens</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li><a href="../index.html" style="color: #999;">Accueil</a></li>
-                        <li><a href="../gammes.html" style="color: #999;">Produits</a></li>
-                        <li><a href="../contact.html" style="color: #999;">Contact</a></li>
+                <div class="footer-section">
+                    <h3>Produits</h3>
+                    <ul>
+                        <li><a href="../categories.html">Catégories</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4>Légal</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li><a href="../mentions-legales.html" style="color: #999;">Mentions Légales</a></li>
-                        <li><a href="../politique-confidentialite.html" style="color: #999;">Politique de Confidentialité</a></li>
-                        <li><a href="../cgv.html" style="color: #999;">CGV</a></li>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="../formules.html">Formules</a></li>
+                        <li><a href="../materiel.html">Équipements</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
                     </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><strong>Adresse :</strong><br>7 Rue Georges Charpak<br>28300 Mainvilliers<br><a href="tel:+33237366170">02 37 36 61 70</a><br><a href="mailto:contact@alphaservice28.fr">contact@alphaservice28.fr</a></p>
                 </div>
             </div>
-            <hr style="border: none; border-top: 1px solid #333; margin: 2rem 0;">
-            <p style="text-align: center; color: #666;">© 2024 Alpha Service. Tous droits réservés.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alpha Service. Tous droits réservés.</p>
+                <ul class="footer-links">
+                    <li><a href="../mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="../politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <li><a href="../cgv.html">CGV</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 
+    <script src="../assets/js/main.js" defer></script>
     <script>
         // Récupérer les paramètres de l'URL
         const urlParams = new URLSearchParams(window.location.search);

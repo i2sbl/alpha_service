@@ -33,8 +33,8 @@
     <main>
         <section class="hero" style="padding: 3rem 0;">
             <div class="container">
-                <a href="../gammes.html" style="color: #8B5CF6; margin-bottom: 1rem; display: inline-block;">
-                    <i class="fas fa-arrow-left"></i> Retour aux gammes
+                <a href="" id="back-link" style="color: #8B5CF6; margin-bottom: 1rem; display: inline-block;">
+                    <i class="fas fa-arrow-left"></i> Retour
                 </a>
                 <h1 id="gamme-title">Gamme</h1>
                 <p id="gamme-description">Chargement...</p>
@@ -89,9 +89,24 @@
     </footer>
 
     <script>
-        // Récupérer l'ID de la gamme depuis l'URL
+        // Récupérer les paramètres de l'URL
         const urlParams = new URLSearchParams(window.location.search);
-        const gammeId = urlParams.get('id') || 'formules';
+        const catId = urlParams.get('cat');
+        const gammeId = urlParams.get('gamme');
+
+        // Mettre à jour le lien retour
+        window.addEventListener('DOMContentLoaded', () => {
+            const backLink = document.getElementById('back-link');
+            const category = { hasGammes: false }; // default
+            
+            fetch('../includes/produits-data.json').then(r => r.json()).then(data => {
+                const cat = data.categories.find(c => c.id === catId);
+                if (cat) {
+                    backLink.href = cat.hasGammes ? `../categories.html` : `../categories.html`;
+                    backLink.textContent = cat.hasGammes ? '← Retour aux catégories' : '← Retour aux catégories';
+                }
+            });
+        });
 
         // Charger les données JSON
         async function loadGammeData() {
@@ -99,68 +114,88 @@
                 const response = await fetch('../includes/produits-data.json');
                 const data = await response.json();
 
+                // Trouver la catégorie
+                const category = data.categories.find(c => c.id === catId);
+                if (!category) {
+                    document.getElementById('gamme-title').textContent = 'Catégorie non trouvée';
+                    return;
+                }
+
+                // Si c'est une catégorie sans gammes, charger directement les produits
+                if (!category.hasGammes) {
+                    document.getElementById('gamme-title').textContent = category.nom;
+                    document.getElementById('gamme-description').textContent = category.description;
+                    document.title = category.nom + ' - Alpha Service';
+
+                    const devisSection = document.getElementById('devis');
+                    devisSection.style.background = `linear-gradient(135deg, ${category.couleur} 0%, ${category.couleur}99 100%)`;
+
+                    const produits = data.produits[catId] || [];
+                    afficherProduits(produits, category);
+                    return;
+                }
+
                 // Trouver la gamme
-                const gamme = data.gammes.find(g => g.id === gammeId);
+                const gammes = data.gammes[catId] || [];
+                const gamme = gammes.find(g => g.id === gammeId);
                 if (!gamme) {
                     document.getElementById('gamme-title').textContent = 'Gamme non trouvée';
-                    document.getElementById('gamme-description').textContent = 'Désolé, cette gamme n\'existe pas.';
                     return;
                 }
 
-                // Mettre à jour les titres
                 document.getElementById('gamme-title').textContent = gamme.nom;
-                document.getElementById('gamme-description').textContent = gamme.description;
+                document.getElementById('gamme-description').textContent = category.description;
                 document.title = gamme.nom + ' - Alpha Service';
 
-                // Mettre à jour la section devis avec la couleur de la gamme
+                // Mettre à jour la section devis avec la couleur de la catégorie
                 const devisSection = document.getElementById('devis');
-                const couleur1 = gamme.couleur;
-                const couleur2 = gamme.couleur.replace(/[0-9a-f]{1,2}/gi, (x) => {
-                    const hex = parseInt(x, 16) - 20;
-                    return Math.max(0, hex).toString(16).padStart(2, '0');
-                });
-                devisSection.style.background = `linear-gradient(135deg, ${gamme.couleur} 0%, ${couleur2} 100%)`;
+                devisSection.style.background = `linear-gradient(135deg, ${category.couleur} 0%, ${category.couleur}99 100%)`;
 
                 // Charger les produits
-                const produits = data.produits[gammeId] || [];
-                const grid = document.getElementById('products-grid');
-                grid.innerHTML = '';
-
-                if (produits.length === 0) {
-                    grid.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">Aucun produit disponible dans cette gamme.</p>';
-                    return;
-                }
-
-                // Afficher les produits
-                produits.forEach(produit => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-                        <div class="product-media">
-                            <img class="product-img" src="../assets/images/${produit.image}" 
-                                 alt="${produit.nom}" 
-                                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div style="height: 200px; background: ${gamme.couleur_light}; border-radius: 4px; display: none; align-items: center; justify-content: center;">
-                                <i class="fas fa-box" style="font-size: 3rem; color: ${gamme.couleur};"></i>
-                            </div>
-                        </div>
-                        <h4>${produit.nom}</h4>
-                        <p>${produit.description}</p>
-                        <div style="margin-top: 1rem;">
-                            <strong style="color: ${gamme.couleur};">TTC : ${produit.prix.toFixed(2).replace('.', ',')}€</strong>
-                        </div>
-                        <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #999;">
-                            Code: ${produit.code}
-                            ${produit.pieces ? `<br>Pièces: ${produit.pieces}` : ''}
-                        </div>
-                    `;
-                    grid.appendChild(card);
-                });
+                const cacheKey = `${catId}-${gammeId}`;
+                const produits = data.produits[cacheKey] || [];
+                afficherProduits(produits, category);
 
             } catch (error) {
                 console.error('Erreur lors du chargement des données:', error);
                 document.getElementById('products-grid').innerHTML = '<p style="text-align: center; grid-column: 1 / -1; color: red;">Erreur lors du chargement des produits.</p>';
             }
+        }
+
+        function afficherProduits(produits, category) {
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = '';
+
+            if (produits.length === 0) {
+                grid.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">Aucun produit disponible dans cette gamme.</p>';
+                return;
+            }
+
+            // Afficher les produits
+            produits.forEach(produit => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="product-media">
+                        <img class="product-img" src="../assets/images/${produit.image}" 
+                             alt="${produit.nom}" 
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div style="height: 200px; background: ${category.couleur_light}; border-radius: 4px; display: none; align-items: center; justify-content: center;">
+                            <i class="fas fa-box" style="font-size: 3rem; color: ${category.couleur};"></i>
+                        </div>
+                    </div>
+                    <h4>${produit.nom}</h4>
+                    <p>${produit.description}</p>
+                    <div style="margin-top: 1rem;">
+                        <strong style="color: ${category.couleur};">TTC : ${produit.prix.toFixed(2).replace('.', ',')}€</strong>
+                    </div>
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #999;">
+                        Code: ${produit.code}
+                        ${produit.pieces ? `<br>Pièces: ${produit.pieces}` : ''}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
         }
 
         // Charger les données au chargement de la page

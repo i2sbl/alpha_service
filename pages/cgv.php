@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $page_title = 'Conditions Générales de Vente';
 $page_description = 'Conditions générales de vente et d\'utilisation d\'Alpha Service';
 
-include __DIR__ . '/../../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
 <section class="hero" style="padding: 3rem 0;">
@@ -113,7 +113,7 @@ include __DIR__ . '/../../includes/header.php';
         <h3>16. Résolution de litiges</h3>
         <p>
             Les litiges seront résolus à l'amiable. En dernier recours, les tribunaux compétents 
-            sont ceux de Chartres.
+            sont ceux de Mainvilliers.
         </p>
 
         <h3>17. Contact</h3>
@@ -126,4 +126,4 @@ include __DIR__ . '/../../includes/header.php';
     </div>
 </section>
 
-<?php include __DIR__ . '/../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

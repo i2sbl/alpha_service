@@ -13,11 +13,15 @@ header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
 
 // Start secure session
 if (session_status() === PHP_SESSION_NONE) {
+    $isSecure = (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off')
+        || (!empty($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)
+        || (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https');
+
     session_set_cookie_params([
         'lifetime' => 3600,
         'path' => '/',
         'domain' => $_SERVER['HTTP_HOST'] ?? 'alphaservice28.fr',
-        'secure' => true,
+        'secure' => $isSecure,
         'httponly' => true,
         'samesite' => 'Strict'
     ]);
@@ -43,8 +47,8 @@ $site_config = [
     'phone' => '02 37 36 61 70',
     'phone_clickable' => '+33237366170',
     'email' => 'contact@alphaservice28.fr',
-    'address' => '7 Rue Georges Charpak, 28300 Chartres',
-    'region' => 'Chartres',
+    'address' => '7 Rue Georges Charpak, 28300 Mainvilliers',
+    'region' => 'Mainvilliers',
     'business_hours' => [
         'Monday' => '8h-12h30 | 14h-17h30',
         'Tuesday' => '9h-12h30 | 14h-17h30',
@@ -57,7 +61,7 @@ $site_config = [
     'social_media' => [
         'facebook' => 'https://www.facebook.com/alphaserviceouest',
         'instagram' => 'https://www.instagram.com/alphaserviceouest/',
-        'google_business' => 'https://www.google.com/maps/place/Alpha-Service/@48.028805,0.20223'
+        'google_business' => 'https://share.google/1mRinLouEYqwotFEI'
     ]
 ];
 

@@ -3,7 +3,7 @@
  */
 
 const CookieManager = {
-    get: function(name) {
+    get: function (name) {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
         for (let i = 0; i < ca.length; i++) {
@@ -15,25 +15,26 @@ const CookieManager = {
         return null;
     },
 
-    set: function(name, value, days = 365) {
+    set: function (name, value, days = 365) {
         const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/;Secure;SameSite=Strict";
+        const secureFlag = location.protocol === 'https:' ? ';Secure' : '';
+        document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/;SameSite=Strict" + secureFlag;
     },
 
-    delete: function(name) {
+    delete: function (name) {
         this.set(name, "", -1);
     },
 
-    acceptAll: function() {
+    acceptAll: function () {
         this.set('analytics_cookies', 'accepted');
         this.set('marketing_cookies', 'accepted');
         this.set('functional_cookies', 'accepted');
         localStorage.setItem('cookieConsent', 'all');
     },
 
-    rejectAll: function() {
+    rejectAll: function () {
         this.set('analytics_cookies', 'rejected');
         this.set('marketing_cookies', 'rejected');
         localStorage.setItem('cookieConsent', 'rejected');

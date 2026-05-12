@@ -231,8 +231,8 @@ Outils de diagnostic:
 
 📞 CONTACT SUPPORT:
 
-Alpha Service - Chartres
-📍 7 Rue Georges Charpak, 28300 Chartres, France
+Alpha Service - Mainvilliers
+📍 7 Rue Georges Charpak, 28300 Mainvilliers, France
 ☎️  +33 (0)2 37 36 61 70
 📧 contact@alphaservice28.fr
 🌐 https://alphaservice28.fr

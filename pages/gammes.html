@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gammes | Alpha Service</title>
+    <meta name="description" content="Découvrez les gammes de produits">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/modern.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="../index.html" class="logo">
+                        <i class="fas fa-champagne-glasses"></i>
+                        <span>Alpha Service</span>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="navbar-nav" id="navbar-nav">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="../categories.html" class="nav-link">Produits</a></li>
+                    <li><a href="../formules.html" class="nav-link">Formules</a></li>
+                    <li><a href="../materiel.html" class="nav-link">Matériel</a></li>
+                    <li><a href="../contact.html" class="nav-link btn-cta">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero" style="padding: 3rem 0;">
+            <div class="container">
+                <a href="../categories.html" style="color: #8B5CF6; margin-bottom: 1rem; display: inline-block;">
+                    <i class="fas fa-arrow-left"></i> Retour aux catégories
+                </a>
+                <h1 id="cat-title">Gammes</h1>
+                <p id="cat-description">Chargement...</p>
+            </div>
+        </section>
+
+        <section style="padding: 3rem 0;">
+            <div class="container">
+                <div class="gammes-grid" id="gammes-grid">
+                    <p style="text-align: center; grid-column: 1 / -1;">Chargement des gammes...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="devis" style="color: white; text-align: center; margin-top: 3rem;">
+            <div class="container">
+                <h2 style="color: white;">Intéressé ?</h2>
+                <p>Demandez un devis gratuit dès maintenant !</p>
+                <a href="../contact.html" class="btn btn-primary" style="background: white; font-weight: 600;">Demander un devis</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>À Propos</h3>
+                    <p><strong>Alpha Service SYCARO SARL</strong></p>
+                    <p>Louez propre, rendez sale !</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Produits</h3>
+                    <ul>
+                        <li><a href="../categories.html">Catégories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="../formules.html">Formules</a></li>
+                        <li><a href="../materiel.html">Équipements</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><strong>Adresse :</strong><br>7 Rue Georges Charpak<br>28300 Mainvilliers<br><a href="tel:+33237366170">02 37 36 61 70</a><br><a href="mailto:contact@alphaservice28.fr">contact@alphaservice28.fr</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alpha Service. Tous droits réservés.</p>
+                <ul class="footer-links">
+                    <li><a href="../mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="../politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <li><a href="../cgv.html">CGV</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .gammes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .gamme-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+        .gamme-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        .gamme-header {
+            padding: 2rem;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .gamme-header i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .gamme-header h3 {
+            margin-bottom: 0.5rem;
+        }
+        .gamme-footer {
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 3px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+    </style>
+
+    <script src="../assets/js/main.js" defer></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const catId = urlParams.get('cat');
+
+        async function loadGamesByCategory() {
+            try {
+                const response = await fetch('../includes/produits-data.json');
+                const data = await response.json();
+
+                const category = data.categories.find(c => c.id === catId);
+                if (!category) {
+                    document.getElementById('cat-title').textContent = 'Catégorie non trouvée';
+                    return;
+                }
+
+                document.getElementById('cat-title').textContent = category.nom;
+                document.getElementById('cat-description').textContent = category.description;
+                document.title = category.nom + ' - Alpha Service';
+
+                const devisSection = document.getElementById('devis');
+                devisSection.style.background = `linear-gradient(135deg, ${category.couleur} 0%, ${category.couleur}99 100%)`;
+
+                const gammes = data.gammes[catId] || [];
+                const grid = document.getElementById('gammes-grid');
+                grid.innerHTML = '';
+
+                if (gammes.length === 0) {
+                    grid.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">Aucune gamme disponible.</p>';
+                    return;
+                }
+
+                gammes.forEach(gamme => {
+                    const card = document.createElement('a');
+                    card.href = `gamme.html?cat=${catId}&gamme=${gamme.id}`;
+                    card.className = 'gamme-card';
+                    card.innerHTML = `
+                        <div class="gamme-header" style="background: ${category.couleur_light};">
+                            <i class="fas fa-box" style="color: ${gamme.couleur};"></i>
+                            <h3 style="color: ${gamme.couleur};">${gamme.nom}</h3>
+                        </div>
+                        <div class="gamme-footer" style="border-color: ${gamme.couleur}; color: ${gamme.couleur};">
+                            <strong>À partir de ${gamme.prix_min.toFixed(2).replace('.', ',')}€</strong>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Erreur:', error);
+                document.getElementById('gammes-grid').innerHTML = '<p style="text-align: center; grid-column: 1 / -1; color: red;">Erreur lors du chargement.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadGamesByCategory);
+    </script>
+</body>
+</html>

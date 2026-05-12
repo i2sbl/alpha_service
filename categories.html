@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catégories | Alpha Service</title>
+    <meta name="description" content="Découvrez nos catégories de produits de location">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/modern.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-champagne-glasses"></i>
+                        <span>Alpha Service</span>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="navbar-nav" id="navbar-nav">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="categories.html" class="nav-link active">Produits</a></li>
+                    <li><a href="formules.html" class="nav-link">Formules</a></li>
+                    <li><a href="materiel.html" class="nav-link">Matériel</a></li>
+                    <li><a href="contact.html" class="nav-link btn-cta">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Nos Catégories de Produits</h1>
+                <p>Choisissez votre catégorie et explorez nos gammes</p>
+            </div>
+        </section>
+
+        <section style="padding: 3rem 0;">
+            <div class="container">
+                <div class="gammes-grid" id="categories-grid">
+                    <p style="text-align: center; grid-column: 1 / -1;">Chargement des catégories...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="devis" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); color: white; text-align: center; margin-top: 4rem;">
+            <div class="container">
+                <h2 style="color: white;">Besoin d'un devis personnalisé ?</h2>
+                <p style="color: rgba(255,255,255,0.9);">Nos équipes sont à votre disposition pour étudier votre projet</p>
+                <a href="contact.html" class="btn btn-primary" style="background: white; color: #8B5CF6; font-weight: 600;">Demander un devis</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>À Propos</h3>
+                    <p><strong>Alpha Service SYCARO SARL</strong></p>
+                    <p>Louez propre, rendez sale !</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Produits</h3>
+                    <ul>
+                        <li><a href="categories.html">Catégories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="formules.html">Formules</a></li>
+                        <li><a href="materiel.html">Équipements</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><strong>Adresse :</strong><br>7 Rue Georges Charpak<br>28300 Mainvilliers<br><a href="tel:+33237366170">02 37 36 61 70</a><br><a href="mailto:contact@alphaservice28.fr">contact@alphaservice28.fr</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alpha Service. Tous droits réservés.</p>
+                <ul class="footer-links">
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <li><a href="cgv.html">CGV</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .gammes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .gamme-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+        .gamme-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        .gamme-header {
+            padding: 2rem;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .gamme-header i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+        .gamme-header h3 {
+            margin-bottom: 0.5rem;
+            color: #1a1a2e;
+        }
+        .gamme-footer {
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 3px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .gamme-footer strong {
+            font-size: 0.95rem;
+        }
+    </style>
+
+    <script src="assets/js/main.js" defer></script>
+    <script>
+        async function loadCategories() {
+            try {
+                const response = await fetch('includes/produits-data.json');
+                const data = await response.json();
+                const grid = document.getElementById('categories-grid');
+                grid.innerHTML = '';
+
+                data.categories.forEach(cat => {
+                    const card = document.createElement('a');
+                    card.href = cat.hasGammes ? `pages/gammes.html?cat=${cat.id}` : `pages/gamme.html?cat=${cat.id}&gamme=${cat.id}`;
+                    card.className = 'gamme-card';
+                    card.style.backgroundColor = 'white';
+                    card.innerHTML = `
+                        <div class="gamme-header" style="background: ${cat.couleur_light};">
+                            <i class="fas ${cat.icon}" style="color: ${cat.couleur};"></i>
+                            <h3 style="color: ${cat.couleur};">${cat.nom}</h3>
+                            <p>${cat.description}</p>
+                        </div>
+                        <div class="gamme-footer" style="border-color: ${cat.couleur}; color: ${cat.couleur};">
+                            <strong>Voir plus</strong>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Erreur:', error);
+                document.getElementById('categories-grid').innerHTML = '<p style="text-align: center; grid-column: 1 / -1; color: red;">Erreur lors du chargement des catégories.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadCategories);
+    </script>
+</body>
+</html>

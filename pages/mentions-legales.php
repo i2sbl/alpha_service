@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $page_title = 'Mentions Légales';
 $page_description = 'Mentions légales et informations légales d\'Alpha Service';
 
-include __DIR__ . '/../../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
 <section class="hero" style="padding: 3rem 0;">
@@ -74,7 +74,7 @@ include __DIR__ . '/../../includes/header.php';
 
         <h3>Droit applicable</h3>
         <p>
-            Ce site est régi par la loi française. Les tribunaux de Chartres sont compétents en cas de litige.
+            Ce site est régi par la loi française. Les tribunaux de Mainvilliers sont compétents en cas de litige.
         </p>
 
         <h3>Contact</h3>
@@ -88,4 +88,4 @@ include __DIR__ . '/../../includes/header.php';
     </div>
 </section>
 
-<?php include __DIR__ . '/../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

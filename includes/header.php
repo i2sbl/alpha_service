@@ -6,10 +6,10 @@ if (!isset($page_title)) {
     $page_title = 'Accueil';
 }
 if (!isset($page_description)) {
-    $page_description = 'Alpha Service - Location de matériel événementiel, vaisselle, nappage et décoration à Chartres';
+    $page_description = 'Alpha Service - Location de matériel événementiel, vaisselle, nappage et décoration à Mainvilliers';
 }
 if (!isset($page_keywords)) {
-    $page_keywords = 'location matériel, événement, mariage, vaisselle, nappage, Chartres';
+    $page_keywords = 'location matériel, événement, mariage, vaisselle, nappage, Mainvilliers';
 }
 if (!isset($canonical_url)) {
     $canonical_url = SITE_URL . $_SERVER['REQUEST_URI'];

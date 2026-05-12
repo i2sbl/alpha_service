@@ -1,11 +1,11 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $page_title = 'Nos Formules';
 $page_description = 'Découvrez nos formules complètes et adaptées à votre budget pour votre événement';
 $page_keywords = 'formules, packs événement, offres, tarifs';
 
-include __DIR__ . '/../../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
 <section class="hero" style="padding: 3rem 0;">
@@ -187,7 +187,7 @@ include __DIR__ . '/../../includes/header.php';
                 <p>Nous livrons généralement dans les 7 jours suivant la confirmation. Pour les urgences, contactez-nous directement.</p>
             </div>
             <div>
-                <h4>Pouvez-vous livrer au-delà de Chartres ?</h4>
+            <h4>Pouvez-vous livrer au-delà de Mainvilliers ?</h4>
                 <p>Oui ! Nous livrons dans toute la région Eure-et-Loire et au-delà. Des frais de transport s'appliquent selon la distance.</p>
             </div>
             <div>
@@ -202,4 +202,4 @@ include __DIR__ . '/../../includes/header.php';
     </div>
 </section>
 
-<?php include __DIR__ . '/../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

@@ -1,0 +1,10 @@
+# Prioritize the PHP site when both index.php and index.html exist
+DirectoryIndex index.php index.html
+
+# Optionally route non-file requests to index.php for pretty URLs
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L,QSA]
+</IfModule>

@@ -141,7 +141,7 @@ main {
     color: var(--secondary);
     transition: var(--transition);
     text-decoration: none;
-    background-image: url("../images/logo.svg");
+    background-image: url("../images/logo.jpg");
     background-repeat: no-repeat;
     background-position: left center;
     background-size: auto 2.5rem;

@@ -1,177 +1,524 @@
 {
   "gammes": [
     {
-      "id": "standard",
-      "nom": "Gamme Standard",
-      "description": "Économique - Pour gros volumes",
-      "icon": "fa-layer-group",
+      "id": "formules",
+      "nom": "Nos Formules",
+      "description": "Packs complets et économiques",
+      "icon": "fa-box",
       "couleur": "#8B5CF6",
       "couleur_light": "#F3E8FF",
-      "prix_min": 0.30
+      "prix_min": 0.65
     },
     {
       "id": "arcopal",
-      "nom": "Gamme Arcopal",
-      "description": "Verrerie robuste - Porcelaine opaque",
+      "nom": "Vaisselle Arcopal",
+      "description": "Gamme classique robuste",
       "icon": "fa-plate",
       "couleur": "#7C3AED",
       "couleur_light": "#E9D5FF",
-      "prix_min": 0.40
+      "prix_min": 0.08
     },
     {
-      "id": "premium",
-      "nom": "Gamme Premium",
-      "description": "Porcelaine fine - Élégant",
+      "id": "porcelaine",
+      "nom": "Vaisselle Porcelaine",
+      "description": "Porcelaine blanche élégante",
       "icon": "fa-crown",
       "couleur": "#D97706",
       "couleur_light": "#FEF3C7",
-      "prix_min": 0.60
+      "prix_min": 0.24
     },
     {
-      "id": "prestige",
-      "nom": "Gamme Prestige",
-      "description": "Haut de gamme - Or/Argent",
-      "icon": "fa-star",
+      "id": "verrerie",
+      "nom": "Verrerie",
+      "description": "Verres et flûtes",
+      "icon": "fa-wine-glass",
       "couleur": "#0D9488",
       "couleur_light": "#F0FDFA",
+      "prix_min": 0.12
+    },
+    {
+      "id": "couverts",
+      "nom": "Couverts",
+      "description": "Couverts en inox",
+      "icon": "fa-utensils",
+      "couleur": "#6B7280",
+      "couleur_light": "#F3F4F6",
+      "prix_min": 0.12
+    },
+    {
+      "id": "materiel",
+      "nom": "Matériel & Équipements",
+      "description": "Équipements de location",
+      "icon": "fa-microchip",
+      "couleur": "#1F2937",
+      "couleur_light": "#F9FAFB",
+      "prix_min": 6.50
+    },
+    {
+      "id": "mobilier",
+      "nom": "Mobilier",
+      "description": "Tables et chaises",
+      "icon": "fa-chair",
+      "couleur": "#059669",
+      "couleur_light": "#F0FDF4",
       "prix_min": 1.20
     }
   ],
   "produits": {
-    "standard": [
+    "formules": [
       {
-        "id": "assiettes-standard",
-        "nom": "Assiettes Standard",
-        "description": "Assiettes robustes pour gros volumes",
-        "prix": 0.30,
-        "image": "porcelaine%2020.jpg",
-        "code": "OPAC-001"
+        "id": "formule-eco",
+        "nom": "ÉCO",
+        "description": "5 pièces - 1 assiette Arcopal, 1 verre Savoie, 1 fourchette, 1 couteau, 1 cuillère à café",
+        "prix": 0.65,
+        "image": "assiette%20rectangle.png",
+        "code": "FORMULE-ECO",
+        "pieces": 5
       },
       {
-        "id": "verres-standard",
-        "nom": "Verres Standard",
-        "description": "Verres résistants pour buffets",
-        "prix": 0.15,
-        "image": "carr%C3%A9%20verre.jpg",
-        "code": "ORAC-001"
+        "id": "formule-asso",
+        "nom": "ASSO",
+        "description": "8 pièces - 2 assiettes Arcopal, 2 verres Savoie, 1 tasse, 1 fourchette, 1 couteau, 1 cuillère à café",
+        "prix": 1.00,
+        "image": "assiette%20rectangle.png",
+        "code": "FORMULE-ASSO",
+        "pieces": 8
       },
       {
-        "id": "couverts-standard",
-        "nom": "Couverts Standard",
-        "description": "Couverts inox économique",
-        "prix": 0.15,
-        "image": "filet%2031.jpg",
-        "code": "TIC-001"
+        "id": "formule-family",
+        "nom": "FAMILY",
+        "description": "8 pièces - 2 assiettes porcelaine, 2 verres Savoie, 1 tasse, 1 fourchette, 1 couteau, 1 cuillère à café",
+        "prix": 1.10,
+        "image": "porcelaine%2025.jpg",
+        "code": "FORMULE-FAMILY",
+        "pieces": 8
       },
       {
-        "id": "tasses-standard",
-        "nom": "Tasses Standard",
-        "description": "Tasses café et thé pratiques",
-        "prix": 0.20,
-        "image": "tasse%20sous%20tasse%20carr%C3%A9.jpg",
-        "code": "TIC-002"
+        "id": "affaire-porcelaine-ronde",
+        "nom": "AFFAIRE PORCELAINE RONDE",
+        "description": "11 pièces - 3 assiettes, 2 verres Savoie, 1 tasse/sous-tasse Porcelaine, 1 fourchette, 1 couteau, 1 cuillère à café, 1 cuillère à moka",
+        "prix": 1.60,
+        "image": "porcelaine%2025.jpg",
+        "code": "AFFAIRE-RONDE",
+        "pieces": 11
+      },
+      {
+        "id": "affaire-porcelaine-carree",
+        "nom": "AFFAIRE PORCELAINE CARRÉE",
+        "description": "11 pièces - 3 assiettes, 2 verres Savoie, 1 tasse/sous-tasse Porcelaine, 1 fourchette, 1 couteau, 1 cuillère à café, 1 cuillère à moka",
+        "prix": 1.90,
+        "image": "porcelaine%2028.jpg",
+        "code": "AFFAIRE-CARREE",
+        "pieces": 11
+      },
+      {
+        "id": "prestige-ronde",
+        "nom": "PRESTIGE PORCELAINE RONDE",
+        "description": "14 pièces - 3 assiettes, 3 verres Prestige, 1 tasse/sous-tasse Porcelaine, 1 fourchette, 1 couteau, 1 cuillère à café, 1 cuillère à moka, 1 service poisson/dessert",
+        "prix": 1.90,
+        "image": "assiette%20peintre.jpg",
+        "code": "PRESTIGE-RONDE",
+        "pieces": 14
+      },
+      {
+        "id": "prestige-filet-or",
+        "nom": "PRESTIGE PORCELAINE FILET OR",
+        "description": "14 pièces - 3 assiettes, 3 verres Prestige, 1 tasse/sous-tasse Porcelaine, 1 fourchette, 1 couteau, 1 cuillère à café, 1 cuillère à moka, 1 service poisson/dessert",
+        "prix": 2.30,
+        "image": "assiette%20peintre.jpg",
+        "code": "PRESTIGE-FILET-OR",
+        "pieces": 14
+      },
+      {
+        "id": "prestige-carree",
+        "nom": "PRESTIGE PORCELAINE CARRÉE",
+        "description": "14 pièces - 3 assiettes, 3 verres Prestige, 1 tasse/sous-tasse Porcelaine, 1 fourchette, 1 couteau, 1 cuillère à café, 1 cuillère à moka, 1 service poisson/dessert",
+        "prix": 2.30,
+        "image": "assiette%20peintre.jpg",
+        "code": "PRESTIGE-CARREE",
+        "pieces": 14
+      },
+      {
+        "id": "prestige-rectangle",
+        "nom": "PRESTIGE PORCELAINE RECTANGLE",
+        "description": "14 pièces - 3 assiettes, 3 verres Prestige, 1 tasse/sous-tasse Porcelaine, 1 fourchette, 1 couteau, 1 cuillère à café, 1 cuillère à moka, 1 service poisson/dessert",
+        "prix": 2.50,
+        "image": "assiette%20peintre.jpg",
+        "code": "PRESTIGE-RECTANGLE",
+        "pieces": 14
+      },
+      {
+        "id": "prestige-martelee",
+        "nom": "PRESTIGE PORCELAINE MARTELÉE",
+        "description": "14 pièces - 3 assiettes, 3 verres Prestige, 1 tasse/sous-tasse Porcelaine, 1 fourchette, 1 couteau, 1 cuillère à café, 1 cuillère à moka, 1 service poisson/dessert",
+        "prix": 2.60,
+        "image": "martelee%2028.jpg",
+        "code": "PRESTIGE-MARTELEE",
+        "pieces": 14
       }
     ],
     "arcopal": [
       {
-        "id": "assiettes-arcopal",
-        "nom": "Assiettes Arcopal",
-        "description": "Porcelaine blanche opaque très résistante",
-        "prix": 0.50,
+        "id": "arcopal-plate-23",
+        "nom": "Assiette plate ronde 23 cm",
+        "description": "Vaisselle Arcopal gamme classique",
+        "prix": 0.18,
+        "image": "assiette%20rectangle.png",
+        "code": "OPAC-001"
+      },
+      {
+        "id": "arcopal-plate-19",
+        "nom": "Assiette plate ronde 19 cm",
+        "description": "Vaisselle Arcopal gamme classique",
+        "prix": 0.18,
         "image": "assiette%20rectangle.png",
         "code": "OPAC-002"
       },
       {
-        "id": "verres-savoie",
-        "nom": "Verres Savoie",
-        "description": "Verres Arcopal usage professionnel",
-        "prix": 0.30,
-        "image": "carr%C3%A9%20verre.jpg",
-        "code": "ORAC-002"
-      },
-      {
-        "id": "bols-arcopal",
-        "nom": "Bols Arcopal",
-        "description": "Bols résistants pour soupes et salades",
-        "prix": 0.40,
-        "image": "saladier.jpg",
+        "id": "arcopal-creuse",
+        "nom": "Assiette creuse",
+        "description": "Vaisselle Arcopal gamme classique",
+        "prix": 0.18,
+        "image": "assiette%20rectangle.png",
         "code": "OPAC-003"
       },
       {
-        "id": "tasses-arcopal",
-        "nom": "Tasses Arcopal",
-        "description": "Tasses avec soucoupes porcelaine",
-        "prix": 0.45,
-        "image": "tasse%20sous%20tasse%20filet.png",
-        "code": "TIC-003"
-      }
-    ],
-    "premium": [
-      {
-        "id": "assiettes-premium",
-        "nom": "Assiettes Premium",
-        "description": "Porcelaine fine blanche élégante",
-        "prix": 0.75,
-        "image": "porcelaine%2025.jpg",
+        "id": "arcopal-dessert",
+        "nom": "Assiette dessert",
+        "description": "Vaisselle Arcopal gamme classique",
+        "prix": 0.18,
+        "image": "assiette%20rectangle.png",
         "code": "OPAC-004"
       },
       {
-        "id": "verres-premium",
-        "nom": "Verres Premium",
-        "description": "Verrerie fine cristal",
-        "prix": 0.60,
-        "image": "porcelaine%2028.jpg",
-        "code": "ORAC-003"
-      },
-      {
-        "id": "couverts-premium",
-        "nom": "Couverts Premium",
-        "description": "Couverts inox 18/10 polis",
-        "prix": 0.50,
-        "image": "martelee%2028.jpg",
-        "code": "TIC-004"
-      },
-      {
-        "id": "tasses-premium",
-        "nom": "Tasses Premium",
-        "description": "Tasses porcelaine fine décorées",
-        "prix": 0.70,
-        "image": "tasse%20sous%20tasse%20martelee.png",
-        "code": "TIC-005"
-      }
-    ],
-    "prestige": [
-      {
-        "id": "assiettes-prestige",
-        "nom": "Assiettes Prestige",
-        "description": "Porcelaine décorée or/argent",
-        "prix": 1.20,
-        "image": "assiette%20peintre.jpg",
+        "id": "arcopal-bol",
+        "nom": "Bol 45 cl",
+        "description": "Vaisselle Arcopal gamme classique",
+        "prix": 0.20,
+        "image": "saladier.jpg",
         "code": "OPAC-005"
       },
       {
-        "id": "verres-prestige",
-        "nom": "Verres Prestige",
-        "description": "Cristal de luxe décor raffiné",
+        "id": "arcopal-tasse",
+        "nom": "Tasse 9 cl",
+        "description": "Vaisselle Arcopal gamme classique",
+        "prix": 0.12,
+        "image": "tasse%20sous%20tasse%20filet.png",
+        "code": "OPAC-006"
+      },
+      {
+        "id": "arcopal-soustasse",
+        "nom": "Sous tasse",
+        "description": "Vaisselle Arcopal gamme classique",
+        "prix": 0.08,
+        "image": "assiette%20rectangle.png",
+        "code": "OPAC-007"
+      }
+    ],
+    "porcelaine": [
+      {
+        "id": "porcelaine-presentation-28",
+        "nom": "Assiette présentation ronde 28 cm",
+        "description": "Vaisselle Porcelaine Blanche",
+        "prix": 0.35,
+        "image": "porcelaine%2028.jpg",
+        "code": "PORE-001"
+      },
+      {
+        "id": "porcelaine-plate-27",
+        "nom": "Assiette plate ronde 27 cm",
+        "description": "Vaisselle Porcelaine Blanche",
+        "prix": 0.30,
+        "image": "porcelaine%2025.jpg",
+        "code": "PORE-002"
+      },
+      {
+        "id": "porcelaine-plate-24",
+        "nom": "Assiette plate ronde 24 cm",
+        "description": "Vaisselle Porcelaine Blanche",
+        "prix": 0.28,
+        "image": "porcelaine%2025.jpg",
+        "code": "PORE-003"
+      },
+      {
+        "id": "porcelaine-dessert",
+        "nom": "Assiette dessert 21 cm",
+        "description": "Vaisselle Porcelaine Blanche",
+        "prix": 0.24,
+        "image": "porcelaine%2020.jpg",
+        "code": "PORE-004"
+      },
+      {
+        "id": "porcelaine-creuse",
+        "nom": "Assiette creuse",
+        "description": "Vaisselle Porcelaine Blanche",
+        "prix": 0.30,
+        "image": "porcelaine%2025.jpg",
+        "code": "PORE-005"
+      },
+      {
+        "id": "porcelaine-tasse",
+        "nom": "Tasse / sous tasse",
+        "description": "Vaisselle Porcelaine Blanche",
+        "prix": 0.25,
+        "image": "tasse%20sous%20tasse%20martelee.png",
+        "code": "PORE-006"
+      }
+    ],
+    "verrerie": [
+      {
+        "id": "verre-flute-champagne",
+        "nom": "Flûte à champagne 15 cl",
+        "description": "Verrerie - Flûte à champagne",
+        "prix": 0.16,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "VERR-001"
+      },
+      {
+        "id": "verre-flute-elegance",
+        "nom": "Flûte Élégance 17 cl",
+        "description": "Verrerie - Flûte élégance",
+        "prix": 0.25,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "VERR-002"
+      },
+      {
+        "id": "verre-savoie-24",
+        "nom": "Verre Savoie 24,5 cl",
+        "description": "Verrerie - Verre Savoie",
+        "prix": 0.16,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "VERR-003"
+      },
+      {
+        "id": "verre-savoie-19",
+        "nom": "Verre Savoie 19 cl",
+        "description": "Verrerie - Verre Savoie",
+        "prix": 0.16,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "VERR-004"
+      },
+      {
+        "id": "verre-savoie-14",
+        "nom": "Verre Savoie 14,5 cl",
+        "description": "Verrerie - Verre Savoie",
+        "prix": 0.16,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "VERR-005"
+      },
+      {
+        "id": "verre-prestige",
+        "nom": "Verre Prestige",
+        "description": "Verrerie - Verre Prestige",
+        "prix": 0.25,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "VERR-006"
+      },
+      {
+        "id": "verre-ballon-19",
+        "nom": "Verre ballon 19 cl",
+        "description": "Verrerie - Verre ballon",
+        "prix": 0.20,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "VERR-007"
+      },
+      {
+        "id": "verre-ballon-24",
+        "nom": "Verre ballon 24 cl",
+        "description": "Verrerie - Verre ballon",
+        "prix": 0.20,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "VERR-008"
+      },
+      {
+        "id": "verre-gobelet",
+        "nom": "Gobelet",
+        "description": "Verrerie - Gobelet",
+        "prix": 0.12,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "VERR-009"
+      },
+      {
+        "id": "verre-pichet",
+        "nom": "Pichet 1 litre",
+        "description": "Verrerie - Pichet",
         "prix": 1.50,
         "image": "carr%C3%A9%20verre.jpg",
-        "code": "ORAC-004"
+        "code": "VERR-010"
+      }
+    ],
+    "couverts": [
+      {
+        "id": "couverts-fourchette",
+        "nom": "Fourchette",
+        "description": "Couverts en inox",
+        "prix": 0.18,
+        "image": "filet%2031.jpg",
+        "code": "TIC-001"
       },
       {
-        "id": "couverts-prestige",
-        "nom": "Couverts Prestige",
-        "description": "Couverts plaqué or/argent massif",
-        "prix": 1.80,
-        "image": "martelee%2022.jpg",
-        "code": "TIC-006"
+        "id": "couverts-couteau",
+        "nom": "Couteau",
+        "description": "Couverts en inox",
+        "prix": 0.18,
+        "image": "filet%2031.jpg",
+        "code": "TIC-002"
       },
       {
-        "id": "tasses-prestige",
-        "nom": "Tasses Prestige",
-        "description": "Tasses collection porcelaine",
-        "prix": 1.50,
-        "image": "tasse%20sous%20tasse%20carr%C3%A9.jpg",
-        "code": "TIC-007"
+        "id": "couverts-cuillere-cafe",
+        "nom": "Cuillère à café",
+        "description": "Couverts en inox",
+        "prix": 0.12,
+        "image": "filet%2031.jpg",
+        "code": "TIC-003"
+      },
+      {
+        "id": "couverts-cuillere-moka",
+        "nom": "Cuillère à moka",
+        "description": "Couverts en inox",
+        "prix": 0.12,
+        "image": "filet%2031.jpg",
+        "code": "TIC-004"
+      },
+      {
+        "id": "couverts-service",
+        "nom": "Service poisson / dessert",
+        "description": "Couverts en inox",
+        "prix": 0.20,
+        "image": "filet%2031.jpg",
+        "code": "TIC-005"
+      }
+    ],
+    "materiel": [
+      {
+        "id": "materiel-bain-marie",
+        "nom": "Bain marie de table",
+        "description": "Hors consommables ou hors gel",
+        "prix": 30.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-001"
+      },
+      {
+        "id": "materiel-bouilloire",
+        "nom": "Bouilloire électrique",
+        "description": "Équipement de location",
+        "prix": 6.50,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-002"
+      },
+      {
+        "id": "materiel-canon-chauffage",
+        "nom": "Canon de chauffage",
+        "description": "Équipement de location",
+        "prix": 30.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-003"
+      },
+      {
+        "id": "materiel-congelateur",
+        "nom": "Congélateur",
+        "description": "Équipement de location",
+        "prix": 30.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-004"
+      },
+      {
+        "id": "materiel-etuve",
+        "nom": "Étuve à cocktails 5 niveaux",
+        "description": "Équipement de location",
+        "prix": 75.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-005"
+      },
+      {
+        "id": "materiel-fontaine-chocolat",
+        "nom": "Fontaine à chocolat",
+        "description": "Équipement de location",
+        "prix": 45.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-006"
+      },
+      {
+        "id": "materiel-machine-cafe",
+        "nom": "Machine à café",
+        "description": "Équipement de location",
+        "prix": 25.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-007"
+      },
+      {
+        "id": "materiel-microondes",
+        "nom": "Micro-ondes",
+        "description": "Équipement de location",
+        "prix": 15.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-008"
+      },
+      {
+        "id": "materiel-percolateur",
+        "nom": "Percolateur 100 tasses",
+        "description": "Équipement de location",
+        "prix": 25.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-009"
+      },
+      {
+        "id": "materiel-refrigerateur",
+        "nom": "Réfrigérateur",
+        "description": "Équipement de location",
+        "prix": 30.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-010"
+      },
+      {
+        "id": "materiel-samovar",
+        "nom": "Samovar",
+        "description": "Équipement de location",
+        "prix": 20.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-011"
+      },
+      {
+        "id": "materiel-tireuse-biere",
+        "nom": "Tireuse à bière",
+        "description": "Équipement de location",
+        "prix": 60.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "EQUIP-012"
+      }
+    ],
+    "mobilier": [
+      {
+        "id": "mobilier-mange-debout",
+        "nom": "Mange debout houssé",
+        "description": "Mobilier de location",
+        "prix": 18.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "MOB-001"
+      },
+      {
+        "id": "mobilier-table",
+        "nom": "Table rectangulaire",
+        "description": "Mobilier de location",
+        "prix": 8.00,
+        "image": "porcelaine%2028.jpg",
+        "code": "MOB-002"
+      },
+      {
+        "id": "mobilier-chaise",
+        "nom": "Chaise pliante",
+        "description": "Mobilier de location",
+        "prix": 2.20,
+        "image": "porcelaine%2028.jpg",
+        "code": "MOB-003"
+      },
+      {
+        "id": "mobilier-housse",
+        "nom": "Housse de chaise",
+        "description": "Mobilier de location",
+        "prix": 1.20,
+        "image": "porcelaine%2028.jpg",
+        "code": "MOB-004"
       }
     ]
   }

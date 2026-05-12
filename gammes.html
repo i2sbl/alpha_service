@@ -85,7 +85,6 @@
             font-size: 1rem;
         }
 
-        /* Color variants */
         .gamme-card.standard .gamme-header {
             background: #F3E8FF;
         }
@@ -96,6 +95,20 @@
         }
 
         .gamme-card.standard .gamme-footer {
+            border-color: #8B5CF6;
+            color: #8B5CF6;
+        }
+
+        .gamme-card.formules .gamme-header {
+            background: #F3E8FF;
+        }
+
+        .gamme-card.formules .gamme-header i,
+        .gamme-card.formules .gamme-header h3 {
+            color: #8B5CF6;
+        }
+
+        .gamme-card.formules .gamme-footer {
             border-color: #8B5CF6;
             color: #8B5CF6;
         }
@@ -114,6 +127,20 @@
             color: #7C3AED;
         }
 
+        .gamme-card.porcelaine .gamme-header {
+            background: #FEF3C7;
+        }
+
+        .gamme-card.porcelaine .gamme-header i,
+        .gamme-card.porcelaine .gamme-header h3 {
+            color: #D97706;
+        }
+
+        .gamme-card.porcelaine .gamme-footer {
+            border-color: #D97706;
+            color: #D97706;
+        }
+
         .gamme-card.premium .gamme-header {
             background: #FEF3C7;
         }
@@ -126,6 +153,62 @@
         .gamme-card.premium .gamme-footer {
             border-color: #D97706;
             color: #D97706;
+        }
+
+        .gamme-card.verrerie .gamme-header {
+            background: #F0FDFA;
+        }
+
+        .gamme-card.verrerie .gamme-header i,
+        .gamme-card.verrerie .gamme-header h3 {
+            color: #0D9488;
+        }
+
+        .gamme-card.verrerie .gamme-footer {
+            border-color: #0D9488;
+            color: #0D9488;
+        }
+
+        .gamme-card.couverts .gamme-header {
+            background: #F3F4F6;
+        }
+
+        .gamme-card.couverts .gamme-header i,
+        .gamme-card.couverts .gamme-header h3 {
+            color: #6B7280;
+        }
+
+        .gamme-card.couverts .gamme-footer {
+            border-color: #6B7280;
+            color: #6B7280;
+        }
+
+        .gamme-card.materiel .gamme-header {
+            background: #F9FAFB;
+        }
+
+        .gamme-card.materiel .gamme-header i,
+        .gamme-card.materiel .gamme-header h3 {
+            color: #1F2937;
+        }
+
+        .gamme-card.materiel .gamme-footer {
+            border-color: #1F2937;
+            color: #1F2937;
+        }
+
+        .gamme-card.mobilier .gamme-header {
+            background: #F0FDF4;
+        }
+
+        .gamme-card.mobilier .gamme-header i,
+        .gamme-card.mobilier .gamme-header h3 {
+            color: #059669;
+        }
+
+        .gamme-card.mobilier .gamme-footer {
+            border-color: #059669;
+            color: #059669;
         }
 
         .gamme-card.prestige .gamme-header {
@@ -189,51 +272,90 @@
         <section style="padding: 3rem 0;">
             <div class="container">
                 <div class="gammes-grid">
-                    <!-- Standard -->
-                    <a href="pages/gamme-standard.php" class="gamme-card standard">
+                    <!-- Formules -->
+                    <a href="pages/gamme-formules.php" class="gamme-card formules">
                         <div class="gamme-header">
-                            <i class="fas fa-layer-group"></i>
-                            <h3>Gamme Standard</h3>
-                            <p>Économique - Pour gros volumes</p>
+                            <i class="fas fa-box"></i>
+                            <h3>Nos Formules</h3>
+                            <p>Packs complets et économiques</p>
                         </div>
                         <div class="gamme-footer">
-                            <strong>À partir de 0,30€</strong>
+                            <strong>À partir de 0,65€</strong>
                             <i class="fas fa-arrow-right"></i>
                         </div>
                     </a>
 
-                    <!-- Arcopal -->
+                    <!-- Vaisselle Arcopal -->
                     <a href="pages/gamme-arcopal.php" class="gamme-card arcopal">
                         <div class="gamme-header">
                             <i class="fas fa-plate"></i>
-                            <h3>Gamme Arcopal</h3>
-                            <p>Verrerie robuste - Porcelaine opaque</p>
+                            <h3>Vaisselle Arcopal</h3>
+                            <p>Gamme classique robuste</p>
                         </div>
                         <div class="gamme-footer">
-                            <strong>À partir de 0,40€</strong>
+                            <strong>À partir de 0,08€</strong>
                             <i class="fas fa-arrow-right"></i>
                         </div>
                     </a>
 
-                    <!-- Premium -->
-                    <a href="pages/gamme-premium.php" class="gamme-card premium">
+                    <!-- Vaisselle Porcelaine -->
+                    <a href="pages/gamme-porcelaine.php" class="gamme-card porcelaine">
                         <div class="gamme-header">
                             <i class="fas fa-crown"></i>
-                            <h3>Gamme Premium</h3>
-                            <p>Porcelaine fine - Élégant</p>
+                            <h3>Vaisselle Porcelaine</h3>
+                            <p>Porcelaine blanche élégante</p>
                         </div>
                         <div class="gamme-footer">
-                            <strong>À partir de 0,60€</strong>
+                            <strong>À partir de 0,24€</strong>
                             <i class="fas fa-arrow-right"></i>
                         </div>
                     </a>
 
-                    <!-- Prestige -->
-                    <a href="pages/gamme-prestige.php" class="gamme-card prestige">
+                    <!-- Verrerie -->
+                    <a href="pages/gamme-verrerie.php" class="gamme-card verrerie">
                         <div class="gamme-header">
-                            <i class="fas fa-star"></i>
-                            <h3>Gamme Prestige</h3>
-                            <p>Haut de gamme - Or/Argent</p>
+                            <i class="fas fa-wine-glass"></i>
+                            <h3>Verrerie</h3>
+                            <p>Verres et flûtes</p>
+                        </div>
+                        <div class="gamme-footer">
+                            <strong>À partir de 0,12€</strong>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Couverts -->
+                    <a href="pages/gamme-couverts.php" class="gamme-card couverts">
+                        <div class="gamme-header">
+                            <i class="fas fa-utensils"></i>
+                            <h3>Couverts</h3>
+                            <p>Couverts en inox</p>
+                        </div>
+                        <div class="gamme-footer">
+                            <strong>À partir de 0,12€</strong>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Matériel & Équipements -->
+                    <a href="pages/gamme-materiel.php" class="gamme-card materiel">
+                        <div class="gamme-header">
+                            <i class="fas fa-microchip"></i>
+                            <h3>Matériel & Équipements</h3>
+                            <p>Équipements de location</p>
+                        </div>
+                        <div class="gamme-footer">
+                            <strong>À partir de 6,50€</strong>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Mobilier -->
+                    <a href="pages/gamme-mobilier.php" class="gamme-card mobilier">
+                        <div class="gamme-header">
+                            <i class="fas fa-chair"></i>
+                            <h3>Mobilier</h3>
+                            <p>Tables et chaises</p>
                         </div>
                         <div class="gamme-footer">
                             <strong>À partir de 1,20€</strong>

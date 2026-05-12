@@ -42,20 +42,20 @@ define('DB_NAME', 'alpha_service_db');
 
 // === VARIABLES GLOBALES ===
 $site_config = [
-    'company_name' => 'Alpha Service SYCARO SARL',
-    'tagline' => 'Louez propre, rendez sale !',
+    'company_name' => 'Alpha Service',
+    'tagline' => 'Votre partenaire de confiance pour vos événements',
     'phone' => '02 37 36 61 70',
     'phone_clickable' => '+33237366170',
     'email' => 'contact@alphaservice28.fr',
     'address' => '7 Rue Georges Charpak, 28300 Mainvilliers',
     'region' => 'Mainvilliers',
     'business_hours' => [
-        'Monday' => '8h-12h30 | 14h-17h30',
-        'Tuesday' => '9h-12h30 | 14h-17h30',
-        'Wednesday' => '9h-12h30 | 14h-17h30',
-        'Thursday' => '9h-12h30 | 14h-17h30',
-        'Friday' => '9h-12h30 | 14h-17h',
-        'Saturday' => '9h-12h',
+        'Monday' => '9h-12h | 14h-18h',
+        'Tuesday' => '9h-12h | 14h-18h',
+        'Wednesday' => '9h-12h | 14h-18h',
+        'Thursday' => '9h-12h | 14h-18h',
+        'Friday' => '9h-12h | 14h-18h',
+        'Saturday' => 'Fermé',
         'Sunday' => 'Fermé'
     ],
     'social_media' => [

@@ -26,7 +26,7 @@ if (!isset($canonical_url)) {
     <title><?php echo sanitize_input($page_title); ?> | Alpha Service</title>
     <meta name="description" content="<?php echo sanitize_input($page_description); ?>">
     <meta name="keywords" content="<?php echo sanitize_input($page_keywords); ?>">
-    <meta name="author" content="Alpha Service SYCARO SARL">
+    <meta name="author" content="Alpha Service">
     <link rel="canonical" href="<?php echo $canonical_url; ?>">
     
     <!-- Open Graph -->

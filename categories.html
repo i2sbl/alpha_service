@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catégories | Alpha Service</title>
-    <meta name="description" content="Découvrez nos catégories de produits de location">
+    <title>Produits | Alpha Service</title>
+    <meta name="description" content="Découvrez nos catégories de produits pour location : vaisselle, couverts, verrerie, mobilier, nappes et matériel professionnel.">
+    <meta name="keywords" content="location vaisselle, location mobilier, location nappes, location matériel">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/modern.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner">
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-brand">
-                    <a href="index.html" class="logo">
+                    <a href="index.html" class="logo" aria-label="Alpha Service - Accueil">
                         <i class="fas fa-champagne-glasses"></i>
                         <span>Alpha Service</span>
                     </a>
                 </div>
-                <button class="menu-toggle" id="menu-toggle">
-                    <span></span><span></span><span></span>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
                 <ul class="navbar-nav" id="navbar-nav">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
@@ -35,28 +38,255 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <section class="hero">
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero-section">
             <div class="container">
-                <h1>Nos Catégories de Produits</h1>
-                <p>Choisissez votre catégorie et explorez nos gammes</p>
-            </div>
-        </section>
-
-        <section style="padding: 3rem 0;">
-            <div class="container">
-                <div class="gammes-grid" id="categories-grid">
-                    <p style="text-align: center; grid-column: 1 / -1;">Chargement des catégories...</p>
+                <div class="hero-content hero-content-centered">
+                    <h1 class="hero-title">Nos Catégories de Produits</h1>
+                    <p class="hero-subtitle">Explorez notre large gamme de produits de qualité pour vos événements</p>
                 </div>
             </div>
         </section>
 
-        <section id="devis" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); color: white; text-align: center; margin-top: 4rem;">
+        <!-- Categories Grid Section -->
+        <section style="padding: 4rem 0; background: #ffffff;">
             <div class="container">
-                <h2 style="color: white;">Besoin d'un devis personnalisé ?</h2>
-                <p style="color: rgba(255,255,255,0.9);">Nos équipes sont à votre disposition pour étudier votre projet</p>
-                <a href="contact.html" class="btn btn-primary" style="background: white; color: #8B5CF6; font-weight: 600;">Demander un devis</a>
+                <div class="categories-container">
+                    <!-- Vaisselle Category -->
+                    <div class="category-section">
+                        <h2 class="category-title">Vaisselle</h2>
+                        <p class="category-description">Assiettes, bols, tasses et accessoires de table en porcelaine et verre</p>
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Porcelaine Blanche</h3>
+                                    <p>Assiettes ronde, créuse, tasses, bols en porcelaine blanche premium</p>
+                                    <div class="price-range">À partir de 0,16€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Filet Or / Couleur</h3>
+                                    <p>Vaisselle décorée avec filet or ou couleur pour un style raffiné</p>
+                                    <div class="price-range">À partir de 0,23€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Porcelaine Carrée</h3>
+                                    <p>Assiettes carrées modernes, tasses carrées avec sous-tasse</p>
+                                    <div class="price-range">À partir de 0,20€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Porcelaine Rectangle</h3>
+                                    <p>Assiettes rectangulaires pour une présentation élégante</p>
+                                    <div class="price-range">À partir de 0,26€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Porcelaine Martelée</h3>
+                                    <p>Effet martelé pour une texture et un style unique et raffiné</p>
+                                    <div class="price-range">À partir de 0,26€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Arcopal</h3>
+                                    <p>Verrerie robuste et économique pour les gros volumes</p>
+                                    <div class="price-range">À partir de 0,08€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Couverts Category -->
+                    <div class="category-section">
+                        <h2 class="category-title">Couverts</h2>
+                        <p class="category-description">Couverts en inox de différentes gammes</p>
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Gamme Standard</h3>
+                                    <p>Couverts robustes et économiques pour un usage quotidien</p>
+                                    <div class="price-range">À partir de 0,13€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Gamme Prestige</h3>
+                                    <p>Couverts de qualité supérieure avec finition premium</p>
+                                    <div class="price-range">À partir de 0,18€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Gamme Orenok & Harmony</h3>
+                                    <p>Collection haut de gamme avec design élégant et moderne</p>
+                                    <div class="price-range">À partir de 0,25€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Verrerie Category -->
+                    <div class="category-section">
+                        <h2 class="category-title">Verrerie</h2>
+                        <p class="category-description">Verres, flûtes et coupes pour tous les types de services</p>
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Gamme Classique</h3>
+                                    <p>Flûtes champagne et verres Savoie incontournables</p>
+                                    <div class="price-range">À partir de 0,16€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Gamme Prestige</h3>
+                                    <p>Coupes champagne, flûtes et verres INAO premium</p>
+                                    <div class="price-range">À partir de 0,22€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Gamme Premium</h3>
+                                    <p>Verres OPEN UP haut de gamme pour événements prestigieux</p>
+                                    <div class="price-range">À partir de 0,30€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Autres Verreries</h3>
+                                    <p>Chopes, coupes à glace, verres apéritif, Duralex</p>
+                                    <div class="price-range">À partir de 0,09€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobilier Category -->
+                    <div class="category-section">
+                        <h2 class="category-title">Mobilier</h2>
+                        <p class="category-description">Tables, chaises, bancs et accessoires de mobilier</p>
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Tables</h3>
+                                    <p>Tables rondes, rectangulaires, ovals en PVC, bois ou extensibles</p>
+                                    <div class="price-range">À partir de 6,00€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Chaises</h3>
+                                    <p>Chaises bistrot, pliantes, wedding-garden en différents styles</p>
+                                    <div class="price-range">À partir de 1,30€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Bancs & Mange-Debout</h3>
+                                    <p>Bancs pliables et mange-debout pour cocktails et réceptions</p>
+                                    <div class="price-range">À partir de 6,00€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Accessoires</h3>
+                                    <p>Tabourets, rallonges de table, barnum et équipements annexes</p>
+                                    <div class="price-range">À partir de 5,00€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nappes & Textiles Category -->
+                    <div class="category-section">
+                        <h2 class="category-title">Nappes & Textiles</h2>
+                        <p class="category-description">Nappes, serviettes et housses pour vos tables et mobilier</p>
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Nappes</h3>
+                                    <p>Nappes carrées et rectangulaires en différentes dimensions</p>
+                                    <div class="price-range">À partir de 9,00€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Juponnage</h3>
+                                    <p>Juponnage rond pour tables rondes 150 ou 170 cm</p>
+                                    <div class="price-range">À partir de 15,00€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Housses</h3>
+                                    <p>Housses pour chaises bistrot et mange-debout</p>
+                                    <div class="price-range">À partir de 3,00€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Serviettes</h3>
+                                    <p>Serviettes blanches et en couleur pour vos services</p>
+                                    <div class="price-range">À partir de 0,78€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Matériel Category -->
+                    <div class="category-section">
+                        <h2 class="category-title">Matériel & Équipements</h2>
+                        <p class="category-description">Équipements professionnels pour la restauration et les événements</p>
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Chauffage & Réfrigération</h3>
+                                    <p>Bain-marie, canon chauffage, réfrigérateurs, congélateurs</p>
+                                    <div class="price-range">À partir de 6,50€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Fontaines</h3>
+                                    <p>Fontaines à chocolat, champagne et cocktails</p>
+                                    <div class="price-range">À partir de 20,00€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Étuves & Matériel de Service</h3>
+                                    <p>Étuves cocktails, traiteur, percolateurs, machine glaçons</p>
+                                    <div class="price-range">À partir de 25,00€</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h3>Accessoires</h3>
+                                    <p>Thermos, plancha, trépied gaz, vestiaire avec cintres</p>
+                                    <div class="price-range">À partir de 5,00€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" style="padding: 3rem 0;">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Besoin d'un Devis Personnalisé ?</h2>
+                    <p>Contactez-nous pour obtenir un devis gratuit. Notre équipe étudie votre projet pour vous proposer la meilleure solution.</p>
+                    <a href="contact.html" class="btn btn-lg btn-primary">Demander un Devis</a>
+                </div>
             </div>
         </section>
     </main>
@@ -66,27 +296,39 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h3>À Propos</h3>
-                    <p><strong>Alpha Service SYCARO SARL</strong></p>
-                    <p>Louez propre, rendez sale !</p>
+                    <h3>Alpha Service</h3>
+                    <p>Votre partenaire de confiance pour la location de matériel événementiel depuis 30 ans.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Produits</h3>
+                    <h3>Liens Rapides</h3>
                     <ul>
-                        <li><a href="categories.html">Catégories</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="categories.html">Produits</a></li>
                         <li><a href="formules.html">Formules</a></li>
-                        <li><a href="materiel.html">Équipements</a></li>
+                        <li><a href="materiel.html">Matériel</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
+                    <h3>Informations</h3>
+                    <ul>
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                        <li><a href="cgv.html">Conditions Générales de Vente</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
                     <h3>Contact</h3>
-                    <p><strong>Adresse :</strong><br>7 Rue Georges Charpak<br>28300 Mainvilliers<br><a href="tel:+33237366170">02 37 36 61 70</a><br><a href="mailto:contact@alphaservice28.fr">contact@alphaservice28.fr</a></p>
+                    <p><strong>Alpha Service</strong><br>
+                    7 Rue Georges Charpak<br>
+                    28300 Mainvilliers<br>
+                    <a href="tel:+33237366170">02 37 36 61 70</a><br>
+                    <a href="mailto:contact@alphaservice28.fr">contact@alphaservice28.fr</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -101,93 +343,87 @@
     </footer>
 
     <style>
-        .gammes-grid {
+        .categories-container {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .category-section {
+            margin-bottom: 4rem;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #8B5CF6;
+            display: inline-block;
+        }
+
+        .category-description {
+            font-size: 1.1rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
-        .gamme-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+
+        .product-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
-            color: inherit;
             cursor: pointer;
-            display: flex;
-            flex-direction: column;
         }
-        .gamme-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+        .product-card:hover {
+            background: white;
+            border-color: #8B5CF6;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+            transform: translateY(-2px);
         }
-        .gamme-header {
-            padding: 2rem;
-            text-align: center;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .gamme-header i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            opacity: 0.8;
-        }
-        .gamme-header h3 {
-            margin-bottom: 0.5rem;
+
+        .product-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
             color: #1a1a2e;
+            margin-bottom: 0.5rem;
         }
-        .gamme-footer {
-            padding: 1.5rem;
-            text-align: center;
-            border-top: 3px solid;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-        .gamme-footer strong {
+
+        .product-content p {
+            color: #6b7280;
             font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .price-range {
+            color: #8B5CF6;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .category-title {
+                font-size: 1.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 
     <script src="assets/js/main.js" defer></script>
-    <script>
-        async function loadCategories() {
-            try {
-                const response = await fetch('includes/produits-data.json');
-                const data = await response.json();
-                const grid = document.getElementById('categories-grid');
-                grid.innerHTML = '';
-
-                data.categories.forEach(cat => {
-                    const card = document.createElement('a');
-                    card.href = cat.hasGammes ? `pages/gammes.html?cat=${cat.id}` : `pages/gamme.html?cat=${cat.id}&gamme=${cat.id}`;
-                    card.className = 'gamme-card';
-                    card.style.backgroundColor = 'white';
-                    card.innerHTML = `
-                        <div class="gamme-header" style="background: ${cat.couleur_light};">
-                            <i class="fas ${cat.icon}" style="color: ${cat.couleur};"></i>
-                            <h3 style="color: ${cat.couleur};">${cat.nom}</h3>
-                            <p>${cat.description}</p>
-                        </div>
-                        <div class="gamme-footer" style="border-color: ${cat.couleur}; color: ${cat.couleur};">
-                            <strong>Voir plus</strong>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    `;
-                    grid.appendChild(card);
-                });
-            } catch (error) {
-                console.error('Erreur:', error);
-                document.getElementById('categories-grid').innerHTML = '<p style="text-align: center; grid-column: 1 / -1; color: red;">Erreur lors du chargement des catégories.</p>';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', loadCategories);
-    </script>
 </body>
 </html>

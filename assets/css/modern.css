@@ -198,6 +198,16 @@ main {
     border-radius: var(--radius-md);
 }
 
+/* Product image helpers */
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    display: block;
+}
+.product-media { margin-bottom: 1rem; }
+
 .nav-link.btn-cta:hover {
     background: var(--primary-dark);
     box-shadow: var(--shadow-md);

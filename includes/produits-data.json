@@ -1,0 +1,178 @@
+{
+  "gammes": [
+    {
+      "id": "standard",
+      "nom": "Gamme Standard",
+      "description": "Économique - Pour gros volumes",
+      "icon": "fa-layer-group",
+      "couleur": "#8B5CF6",
+      "couleur_light": "#F3E8FF",
+      "prix_min": 0.30
+    },
+    {
+      "id": "arcopal",
+      "nom": "Gamme Arcopal",
+      "description": "Verrerie robuste - Porcelaine opaque",
+      "icon": "fa-plate",
+      "couleur": "#7C3AED",
+      "couleur_light": "#E9D5FF",
+      "prix_min": 0.40
+    },
+    {
+      "id": "premium",
+      "nom": "Gamme Premium",
+      "description": "Porcelaine fine - Élégant",
+      "icon": "fa-crown",
+      "couleur": "#D97706",
+      "couleur_light": "#FEF3C7",
+      "prix_min": 0.60
+    },
+    {
+      "id": "prestige",
+      "nom": "Gamme Prestige",
+      "description": "Haut de gamme - Or/Argent",
+      "icon": "fa-star",
+      "couleur": "#0D9488",
+      "couleur_light": "#F0FDFA",
+      "prix_min": 1.20
+    }
+  ],
+  "produits": {
+    "standard": [
+      {
+        "id": "assiettes-standard",
+        "nom": "Assiettes Standard",
+        "description": "Assiettes robustes pour gros volumes",
+        "prix": 0.30,
+        "image": "porcelaine%2020.jpg",
+        "code": "OPAC-001"
+      },
+      {
+        "id": "verres-standard",
+        "nom": "Verres Standard",
+        "description": "Verres résistants pour buffets",
+        "prix": 0.15,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "ORAC-001"
+      },
+      {
+        "id": "couverts-standard",
+        "nom": "Couverts Standard",
+        "description": "Couverts inox économique",
+        "prix": 0.15,
+        "image": "filet%2031.jpg",
+        "code": "TIC-001"
+      },
+      {
+        "id": "tasses-standard",
+        "nom": "Tasses Standard",
+        "description": "Tasses café et thé pratiques",
+        "prix": 0.20,
+        "image": "tasse%20sous%20tasse%20carr%C3%A9.jpg",
+        "code": "TIC-002"
+      }
+    ],
+    "arcopal": [
+      {
+        "id": "assiettes-arcopal",
+        "nom": "Assiettes Arcopal",
+        "description": "Porcelaine blanche opaque très résistante",
+        "prix": 0.50,
+        "image": "assiette%20rectangle.png",
+        "code": "OPAC-002"
+      },
+      {
+        "id": "verres-savoie",
+        "nom": "Verres Savoie",
+        "description": "Verres Arcopal usage professionnel",
+        "prix": 0.30,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "ORAC-002"
+      },
+      {
+        "id": "bols-arcopal",
+        "nom": "Bols Arcopal",
+        "description": "Bols résistants pour soupes et salades",
+        "prix": 0.40,
+        "image": "saladier.jpg",
+        "code": "OPAC-003"
+      },
+      {
+        "id": "tasses-arcopal",
+        "nom": "Tasses Arcopal",
+        "description": "Tasses avec soucoupes porcelaine",
+        "prix": 0.45,
+        "image": "tasse%20sous%20tasse%20filet.png",
+        "code": "TIC-003"
+      }
+    ],
+    "premium": [
+      {
+        "id": "assiettes-premium",
+        "nom": "Assiettes Premium",
+        "description": "Porcelaine fine blanche élégante",
+        "prix": 0.75,
+        "image": "porcelaine%2025.jpg",
+        "code": "OPAC-004"
+      },
+      {
+        "id": "verres-premium",
+        "nom": "Verres Premium",
+        "description": "Verrerie fine cristal",
+        "prix": 0.60,
+        "image": "porcelaine%2028.jpg",
+        "code": "ORAC-003"
+      },
+      {
+        "id": "couverts-premium",
+        "nom": "Couverts Premium",
+        "description": "Couverts inox 18/10 polis",
+        "prix": 0.50,
+        "image": "martelee%2028.jpg",
+        "code": "TIC-004"
+      },
+      {
+        "id": "tasses-premium",
+        "nom": "Tasses Premium",
+        "description": "Tasses porcelaine fine décorées",
+        "prix": 0.70,
+        "image": "tasse%20sous%20tasse%20martelee.png",
+        "code": "TIC-005"
+      }
+    ],
+    "prestige": [
+      {
+        "id": "assiettes-prestige",
+        "nom": "Assiettes Prestige",
+        "description": "Porcelaine décorée or/argent",
+        "prix": 1.20,
+        "image": "assiette%20peintre.jpg",
+        "code": "OPAC-005"
+      },
+      {
+        "id": "verres-prestige",
+        "nom": "Verres Prestige",
+        "description": "Cristal de luxe décor raffiné",
+        "prix": 1.50,
+        "image": "carr%C3%A9%20verre.jpg",
+        "code": "ORAC-004"
+      },
+      {
+        "id": "couverts-prestige",
+        "nom": "Couverts Prestige",
+        "description": "Couverts plaqué or/argent massif",
+        "prix": 1.80,
+        "image": "martelee%2022.jpg",
+        "code": "TIC-006"
+      },
+      {
+        "id": "tasses-prestige",
+        "nom": "Tasses Prestige",
+        "description": "Tasses collection porcelaine",
+        "prix": 1.50,
+        "image": "tasse%20sous%20tasse%20carr%C3%A9.jpg",
+        "code": "TIC-007"
+      }
+    ]
+  }
+}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Gammes de Produits | Alpha Service</title>
+    <meta name="description"
+        content="Choisissez parmi nos 4 gammes de produits: Standard, Arcopal, Premium, Prestige">
+    <link rel="canonical" href="https://i2sbl.github.io/alpha_service/gammes.html">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/modern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <style>
+        .gammes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gamme-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gamme-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .gamme-header {
+            padding: 2rem;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .gamme-header i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .gamme-header h3 {
+            margin-bottom: 0.5rem;
+            color: #1a1a2e;
+        }
+
+        .gamme-header p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .gamme-footer {
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 3px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .gamme-footer strong {
+            font-size: 0.95rem;
+        }
+
+        .gamme-footer i {
+            font-size: 1rem;
+        }
+
+        /* Color variants */
+        .gamme-card.standard .gamme-header {
+            background: #F3E8FF;
+        }
+
+        .gamme-card.standard .gamme-header i,
+        .gamme-card.standard .gamme-header h3 {
+            color: #8B5CF6;
+        }
+
+        .gamme-card.standard .gamme-footer {
+            border-color: #8B5CF6;
+            color: #8B5CF6;
+        }
+
+        .gamme-card.arcopal .gamme-header {
+            background: #E9D5FF;
+        }
+
+        .gamme-card.arcopal .gamme-header i,
+        .gamme-card.arcopal .gamme-header h3 {
+            color: #7C3AED;
+        }
+
+        .gamme-card.arcopal .gamme-footer {
+            border-color: #7C3AED;
+            color: #7C3AED;
+        }
+
+        .gamme-card.premium .gamme-header {
+            background: #FEF3C7;
+        }
+
+        .gamme-card.premium .gamme-header i,
+        .gamme-card.premium .gamme-header h3 {
+            color: #D97706;
+        }
+
+        .gamme-card.premium .gamme-footer {
+            border-color: #D97706;
+            color: #D97706;
+        }
+
+        .gamme-card.prestige .gamme-header {
+            background: #F0FDFA;
+        }
+
+        .gamme-card.prestige .gamme-header i,
+        .gamme-card.prestige .gamme-header h3 {
+            color: #0D9488;
+        }
+
+        .gamme-card.prestige .gamme-footer {
+            border-color: #0D9488;
+            color: #0D9488;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>🍪 Nous utilisons des cookies pour améliorer votre expérience.</p>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="btn btn-primary">Accepter</button>
+                <button id="cookie-customize" class="btn btn-secondary">Personnaliser</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-champagne-glasses"></i>
+                        <span>Alpha Service</span>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="navbar-nav" id="navbar-nav">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="gammes.html" class="nav-link active">Produits</a></li>
+                    <li><a href="formules.html" class="nav-link">Formules</a></li>
+                    <li><a href="materiel.html" class="nav-link">Matériel</a></li>
+                    <li><a href="contact.html" class="nav-link btn-cta">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="padding: 3rem 0;">
+            <div class="container">
+                <h1>Nos Gammes de Produits</h1>
+                <p>Choisissez la gamme adaptée à vos besoins événementiels</p>
+            </div>
+        </section>
+
+        <section style="padding: 3rem 0;">
+            <div class="container">
+                <div class="gammes-grid">
+                    <!-- Standard -->
+                    <a href="pages/gamme-standard.php" class="gamme-card standard">
+                        <div class="gamme-header">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>Gamme Standard</h3>
+                            <p>Économique - Pour gros volumes</p>
+                        </div>
+                        <div class="gamme-footer">
+                            <strong>À partir de 0,30€</strong>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Arcopal -->
+                    <a href="pages/gamme-arcopal.php" class="gamme-card arcopal">
+                        <div class="gamme-header">
+                            <i class="fas fa-plate"></i>
+                            <h3>Gamme Arcopal</h3>
+                            <p>Verrerie robuste - Porcelaine opaque</p>
+                        </div>
+                        <div class="gamme-footer">
+                            <strong>À partir de 0,40€</strong>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Premium -->
+                    <a href="pages/gamme-premium.php" class="gamme-card premium">
+                        <div class="gamme-header">
+                            <i class="fas fa-crown"></i>
+                            <h3>Gamme Premium</h3>
+                            <p>Porcelaine fine - Élégant</p>
+                        </div>
+                        <div class="gamme-footer">
+                            <strong>À partir de 0,60€</strong>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Prestige -->
+                    <a href="pages/gamme-prestige.php" class="gamme-card prestige">
+                        <div class="gamme-header">
+                            <i class="fas fa-star"></i>
+                            <h3>Gamme Prestige</h3>
+                            <p>Haut de gamme - Or/Argent</p>
+                        </div>
+                        <div class="gamme-footer">
+                            <strong>À partir de 1,20€</strong>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CALL TO ACTION ===== -->
+        <section id="devis"
+            style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); color: white; text-align: center; margin-top: 4rem;">
+            <div class="container">
+                <h2 style="color: white;">Besoin d'un devis personnalisé ?</h2>
+                <p style="color: rgba(255,255,255,0.9);">Nos équipes sont à votre disposition pour étudier votre projet</p>
+                <a href="contact.html" class="btn btn-primary" style="background: white; color: #8B5CF6; font-weight: 600;">Demander un devis</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>À Propos</h3>
+                    <p><strong>Alpha Service SYCARO SARL</strong></p>
+                    <p>Louez propre, rendez sale !</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/alphaserviceouest" target="_blank" rel="noopener"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/alphaserviceouest/" target="_blank" rel="noopener"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://share.google/1mRinLouEYqwotFEI" target="_blank" rel="noopener"><i
+                                class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Produits</h3>
+                    <ul>
+                        <li><a href="gammes.html">Gammes</a></li>
+                        <li><a href="pages/gamme-standard.php">Standard</a></li>
+                        <li><a href="pages/gamme-premium.php">Premium</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="formules.html">Formules</a></li>
+                        <li><a href="materiel.html">Équipements</a></li>
+                        <li><a href="contact.html">Devis</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><strong>Adresse :</strong><br>7 Rue Georges Charpak<br>28300 Mainvilliers<br><a
+                            href="tel:+33237366170">02 37 36 61 70</a><br><a
+                            href="mailto:contact@alphaservice28.fr">contact@alphaservice28.fr</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alpha Service. Tous droits réservés.</p>
+                <ul class="footer-links">
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <li><a href="cgv.html">CGV</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/cookies.js" defer></script>
+</body>
+
+</html>

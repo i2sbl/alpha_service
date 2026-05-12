@@ -1,7 +1,9 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
 
-$page_title = 'Nos Produits';
+// Redirection vers gammes
+header('Location: ' . SITE_URL . '/gammes.html', true, 301);
+exit;
 $page_description = 'Découvrez notre large gamme de produits pour location: vaisselle (Standard, Arcopal, Premium, Prestige), mobilier, nappage, décoration pour vos événements';
 $page_keywords = 'location vaisselle, location mobilier, location nappage, location décoration';
 

@@ -87,14 +87,28 @@ function validate_email($email) {
 }
 
 /**
- * Log activity
+ * Log activity (safe, won't crash if logging fails)
  */
 function log_activity($action, $details = '') {
     $log_file = __DIR__ . '/../data/activity.log';
+    
+    // Create data directory if needed
+    $data_dir = dirname($log_file);
+    if (!is_dir($data_dir)) {
+        @mkdir($data_dir, 0755, true);
+    }
+    
+    // Only log if we have write permissions
+    if (!is_writable($data_dir)) {
+        return; // Silently skip logging
+    }
+    
     $timestamp = date('Y-m-d H:i:s');
     $ip_address = sanitize_input($_SERVER['REMOTE_ADDR'] ?? 'unknown');
     $log_entry = "[$timestamp] IP: $ip_address | Action: $action | Details: $details\n";
-    error_log($log_entry, 3, $log_file);
+    
+    // Suppress errors and silently fail if logging doesn't work
+    @error_log($log_entry, 3, $log_file);
 }
 
 /**
@@ -119,8 +133,19 @@ if (!IS_PRODUCTION) {
 }
 
 // === AUTOLOAD ===
-require_once __DIR__ . '/Database.php';
-require_once __DIR__ . '/Cache.php';
+// Load Database and Cache classes if available (optional for basic operation)
+if (file_exists(__DIR__ . '/Database.php')) {
+    require_once __DIR__ . '/Database.php';
+}
+if (file_exists(__DIR__ . '/Cache.php')) {
+    require_once __DIR__ . '/Cache.php';
+}
 
-log_activity('page_load', $_SERVER['REQUEST_URI'] ?? 'unknown');
+// Log activity (skip if logging fails)
+try {
+    log_activity('page_load', $_SERVER['REQUEST_URI'] ?? 'unknown');
+} catch (Exception $e) {
+    // Silently fail if logging is not available
+    error_log('Logging failed: ' . $e->getMessage());
+}
 ?>

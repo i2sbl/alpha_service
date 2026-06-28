@@ -34,7 +34,7 @@ if (!isset($canonical_url)) {
     <meta property="og:description" content="<?php echo sanitize_input($page_description); ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?php echo $canonical_url; ?>">
-    <meta property="og:image" content="<?php echo SITE_URL; ?>/assets/images/logo.png">
+    <meta property="og:image" content="<?php echo SITE_URL; ?>/assets/images/logo.svg">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -55,8 +55,8 @@ if (!isset($canonical_url)) {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="<?php echo SITE_URL; ?>/assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="<?php echo SITE_URL; ?>/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="<?php echo SITE_URL; ?>/assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="<?php echo SITE_URL; ?>/assets/images/favicon.svg">
     
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -64,7 +64,7 @@ if (!isset($canonical_url)) {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "<?php echo $site_config['company_name']; ?>",
-        "image": "<?php echo SITE_URL; ?>/assets/images/logo.png",
+        "image": "<?php echo SITE_URL; ?>/assets/images/logo.svg",
         "description": "<?php echo $site_config['tagline']; ?>",
         "telephone": "<?php echo $site_config['phone_clickable']; ?>",
         "email": "<?php echo $site_config['email']; ?>",
